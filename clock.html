@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: rgb(27, 27, 80);
+        }
+
+        #p {
+            background-color: whitesmoke;
+            opacity: 0.5; 
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            padding: 0.5rem;
+            width: 40%;
+            height: 7%;
+            text-align: center; 
+            cursor: pointer;
+        }
+
+        #app {
+            background-color: whitesmoke;
+            opacity: 0.5; 
+            color: black;
+            width: 20%;
+            cursor: pointer;
+            padding: 0rem;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            top: 80%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+
+        #app ul {
+            list-style-type: none; 
+            margin: 0;
+            padding: 0;
+        }
+
+        #app ul li {
+            margin-bottom: 10px; 
+        }
+        .options:hover{
+            background-color: rgb(13, 26, 37);
+            opacity: 100%;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="p" onclick="myfct()">
+        <p    onclick="myfct()" id="para">Select Social Media</p>
+    </div>
+    <div id="app">
+        <ol>
+            <ul>
+                <li class="options">Facebook</li>
+                <hr>
+            </ul>
+            <ul>
+                <li class="options"  >Instagram</li>
+                <hr>
+            </ul>
+            <ul>
+                <li class="options"  >YouTube</li>
+                <hr>
+            </ul>
+            <ul>
+                <li class="options"  >Twitter</li>
+                <hr>
+            </ul>
+            <ul>
+                <li class="options" >Pinterest</li>
+                <hr>
+            </ul>
+            <ul>
+                <li class="options"  >Whatsapp</li>
+                <hr>
+            </ul>
+        </ol>
+    </div>
+    <script>
+
+let options = document.getElementsByClassName("options");
+for(option of options ){
+    option.onclick=function(){
+        para.innerHTML= this.textContent;
+       apps.classList.toggle("hide");
+    }
+}
+      let apps= document.getElementById("app");
+      let para= document.getElementById("para");
+      function myfct(){
+        if (apps.style.display==="none"){
+            apps.style.display= "block";
+        }
+        else{
+            apps.style.display="none";
+        }
+        para.onclick=function(){
+            window.location.href=" clock.html"
+        }
+      }
+    
+    
+   
+
+        
+      
+    </script>
+</body>
+</html>

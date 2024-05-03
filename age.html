@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     body, html {
+        margin: 0;
+    padding: 0;
+    height: 100%;
+    background: linear-gradient(pink, rgb(50, 50, 222));
+}
+.h1{
+    display: flex;
+    justify-content: center;
+}
+#span{
+      font-size: 30px ;
+      font-style: italic;
+      color: blue;
+}
+#d1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(243, 229, 229);
+    color: black;
+    width: 300px;
+    height: 100px;
+    text-align: center;
+}
+#submit{
+    font-size: 15px;
+    border-radius: 30%;
+    background: linear-gradient(pink, blue);
+    color: aliceblue;
+}
+input, button{
+    font: 100px;
+}
+#date{
+    font-size: 16px;
+}
+</style>
+<body>
+  
+    <h1 class="h1"  >Java script  <br>  </h1>
+    <span class="h1" id="span"> <strong>Age Calculator</strong></span>
+
+    <div id="d1">
+        <h3>type your birth:</h3>
+        <input type="text" name="date" id="date"  >
+        <button type="submit" id="submit">Calculate</button>
+      
+    </div>
+ 
+
+
+
+
+      
+<script>
+ 
+    let a = document.getElementById("date");
+        let c = document.getElementById("submit");
+        let d = document.getElementById("demo");
+        let e = document.getElementById("d1");
+
+        c.onclick = myfct;
+        function myfct(){
+
+       
+            if (d) {
+                d1.removeChild(d);
+            }
+
+            let birthdate = new Date(a.value);
+            let currentdate = new Date();
+            let ageinms = currentdate - birthdate;
+            let ageinyears = Math.floor(ageinms / (1000 * 60 * 60 * 24 * 365));
+
+            let message = document.createElement("p");
+            message.textContent = "Your age is approximately " + ageinyears + " years.";
+            message.id = "demo";
+            d1.appendChild(message);
+        }
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>click to see the date </h2>
+
+<p id="demo"> date here </p>
+<input type="text" name="" id="n" onchange="uppercase()">
+<h1 onmouseover="mouseover(this)" onmouseout="mouseout(this)"> on mouse over</h1>
+<button id="btn">click me </button>
+<script>
+    let b = document.getElementById("btn");
+    b.addEventListener("click", fct);
+    function fct(){
+        alert ("hello nisrine");
+    }
+  function mouseover(id){
+    id.innerHTML= 'mouse over'
+  }
+  function mouseout(id){
+    id.innerHTML="mouse out"
+  }
+    function uppercase(){
+         document.getElementById("n").value= document.getElementById("n").value.toUpperCase();
+    }
+    function myfct(){
+         document.getElementById("demo").innerHTML= Date();
+    }
+    document.getElementById("btn").onclick= myfct();
+
+
+
+</script>
+</script>
+</body>
+</html>

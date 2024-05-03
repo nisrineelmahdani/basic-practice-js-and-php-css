@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+         body, html {
+        margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: rgb(27, 27, 80);
+}
+#btn{
+    font-size: large;
+    background-color: white;
+    border-radius: 50%;
+    padding: 0.5rem;
+    display: block;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.div{
+    background-color: aliceblue;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+
+}
+.title{
+    color: black;
+    text-align: center;
+
+
+}
+.para{
+    font-style: oblique;
+    text-align: center;
+    color: black;
+}
+.btn{
+   background-color: green;
+   color: white;
+   padding: auto;
+   position: absolute;
+   transform: translate(-50%, -50%);
+   top: 90%;
+   left: 50%;
+
+}
+.dv{
+    border: 50%;
+  background-color: green;
+  size: 50px;
+  position: fixed;
+  bottom: 150%;
+  left: 50%;
+}
+    </style>
+    <button id="btn" onclick="myfct()">Submit</button>
+    <script>
+        function myfct(){
+
+    
+        var body = document.body;
+        let div= document.createElement('div');
+        let dv= document.createElement('div');
+        let title= document.createElement('h1');
+        let text= document.createTextNode("Thank You");
+        let para= document.createElement('p');
+        let paratext= document.createTextNode("your details has been successfully submitted.thanks!");
+        let button= document.createElement('button');
+        let divtext= document.createTextNode("Ok");
+        div.className="div";
+        title.className="title";
+        para.className="para";
+        button.className="btn";
+        dv.className="dv";
+
+        div.appendChild(title);
+        title.appendChild(text);
+        para.appendChild(paratext);
+        button.appendChild(divtext);
+
+        document.body.appendChild(dv);
+        document.body.appendChild(div);
+       document.body.appendChild(title);
+       document.body.appendChild(para);
+       document.body.appendChild(button);    
+    
+       div.appendChild(title);
+       div.appendChild(para);
+       div.appendChild(button);   
+      
+       button.onclick = function() {
+    // Redirect to the first page
+    window.location.href = "popup.html"; // Replace "first_page.html" with the actual URL of your first page
+};
+    }
+      
+    </script>
+</body>
+</html>

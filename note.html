@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    {
+        background: linear-gradient(rgb(193, 49, 193), blue);
+   padding: 25%;
+    }
+    input, button{
+        font-size: xx-large;
+    }
+    #btn{
+        border-radius: 40%;
+        background-color: purple;
+        color: white;
+        font-size: medium;
+    }
+    #txt{
+        height: 100%;
+        width: 50%;
+    }
+</style>
+<body>
+    <h1 id="h">Notes</h1>
+      <button  id="btn"> Create Notes </button> <br> <br> <br> <br>
+      <input type="text" name="" >
+      <h2 id="h2"></h2>
+      <script>
+        let a = document.getElementById("btn");
+        let b = document.getElementById("h2");
+        a.onclick=myfct;
+        function myfct(){
+             let c= document.createElement("input");
+             b.appendChild(c); break
+
+        }
+      </script>
+</body>
+</html>

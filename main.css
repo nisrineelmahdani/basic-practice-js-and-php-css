@@ -1,0 +1,30 @@
+h1{
+    color: red;
+    font-size: 30px;
+    font-style: italic;
+}
+p{
+    font-size: medium;
+    color: rgb(179, 78, 78);
+    font-family: 'Courier New', Courier, monospace;
+
+}
+ol{
+    font-style: italic;
+    font-size: x-large;
+}
+.firstclass{
+    background-color: rgb(97, 186, 157);
+}
+.secdiv{
+    background-color: rgb(48, 81, 56);
+    color: aliceblue;
+    font-size: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 1rem;
+    text-align: justify;
+}
+#form{
+    text-align: center;
+
+}
